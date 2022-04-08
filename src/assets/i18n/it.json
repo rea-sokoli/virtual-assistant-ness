@@ -101,6 +101,7 @@
     "province": "Provincia",
     "phone_number": "Telefono",
     "email": "Email",
+    "attachment":"Attaccamento",
     "address": "Indirizzo",
     "company": "Azienda",
     "active": "Attivo",
@@ -127,7 +128,12 @@
   "companies": {
     "list": {
       "companies-list": "Lista Aziende",
-      "vat-number": "Partita IVA"
+      "name": "Nome",
+      "description": "Descrizione",
+      "address": "Indirizzo",
+      "city": "Città",
+      "province": "Provincia",
+      "active": "Attivo"
     },
     "edit": {
       "edit-comp": "Modifica Azienda"
@@ -153,7 +159,11 @@
   "attachments": {
     "list": {
       "attachments-list": "Lista Allegati",
-      "vat-number": "Partita IVA"
+      "name": "Nome",
+      "external_type": "Tipo Esterno",
+      "external_uuid": "Codice Esterno",
+      "mime_type": "Tipo Mimo",
+      "creation_date": "Data di Creazione"
     },
     "edit": {
       "edit-attachment": "Modifica Allegati"

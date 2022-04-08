@@ -1,11 +1,9 @@
 export class Attachment {
-  uuids: string;
+  attachment_uuid: string;
   uuid: string;
   name: string;
-  original_filename: string;
-  mime_type: string;
-  creation_date: string;
-  external_uuid: string;
   external_type: string;
-  size?: number;
+  external_uuid: string;
+  mime_type: string;
+  creation_date: Date;
 }

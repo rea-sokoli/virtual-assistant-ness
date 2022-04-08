@@ -16,13 +16,16 @@ export class AttachmentListComponent extends AbstractListComponent<Attachment> i
     values: any = {};
 
     constructor(router: Router, private attachmentService: AttachmentService) {
-        super(router, attachmentService, 'companies');
+        super(router, attachmentService, 'attachment');
 
         this.labels['name'] = 'name';
-        this.labels['vatnumber'] = 'vatnumber';
+        this.labels['external_type'] = 'external_type';
+        this.labels['external_uuid'] = 'external_uuid';
+        this.labels['mime_type'] = 'mime_type';
+        this.labels['creation_date'] = 'creation_date';
     }
     ngOnInit(): void {
-        console.log('COMPANIES', this.model);
+        console.log('ATTACHMENT', this.model);
 
     }
 
@@ -31,7 +34,7 @@ export class AttachmentListComponent extends AbstractListComponent<Attachment> i
     }
 
     preLoaddata(): void {
-        this.service.search.orderBy = 'name ASC';
+        this.service.search.orderBy = 'name';
         super.preLoaddata();
     }
 

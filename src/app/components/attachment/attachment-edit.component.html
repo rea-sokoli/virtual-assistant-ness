@@ -70,10 +70,11 @@
                 <p-card>
                     <div class="p-grid">
                         <div class="p-col-12">
+
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{ 'users.name' | translate }} (*)
+                                    {{ 'attachment.list.name' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
@@ -83,7 +84,7 @@
                                         name="name"
                                         pInputText
                                         [placeholder]="
-                                            'users.name' | translate | lowercase
+                                            'attachment.list.name' | translate | lowercase
                                         "
                                         type="text"
                                     />
@@ -93,22 +94,18 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{
-                                        'attachments.list.vat-number' | translate
-                                    }}
-                                    (*)
+                                    {{ 'attachment.list.external_type' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
                                     <input
-                                        name="vatnumber"
+                                        [(ngModel)]="element.external_type"
+                                        formControlName="external_type"
+                                        name="external_type"
                                         pInputText
                                         [placeholder]="
-                                            'attachments.vat-number'
-                                                | translate
-                                                | lowercase
+                                            'attachment.list.external_type' | translate | lowercase
                                         "
-                                        placeholder="vatnumber"
                                         type="text"
                                     />
                                 </div>
@@ -117,21 +114,90 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    <!-- {{
-                                        'attachments.list.vat-number' | translate
-                                    }} -->
-                                    Webhook Url (*)
+                                    {{ 'attachment.list.external_uuid' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
                                     <input
-                                        name="webhook_link"
+                                        [(ngModel)]="element.external_uuid"
+                                        formControlName="external_uuid"
+                                        name="external_uuid"
                                         pInputText
-                                        placeholder="webhook url"
+                                        [placeholder]="
+                                            'attachment.list.external_uuid' | translate | lowercase
+                                        "
                                         type="text"
                                     />
                                 </div>
                             </div>
+
+                            <div class="form-group p-grid"
+                                style="align-items: center">
+                                <div class="p-col-3">
+                                    {{ 'attachment.list.mime_type' | translate }} (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.mime_type"
+                                        formControlName="mime_type"
+                                        name="mime_type"
+                                        pInputText
+                                        [placeholder]="
+                                            'attachment.list.mime_type' | translate | lowercase
+                                        "
+                                        type="text"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group p-grid"
+                                style="align-items: center">
+                                <div class="p-col-3">
+                                    {{ 'attachment.list.creation_date' | translate }} (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.creation_date"
+                                        formControlName="creation_date"
+                                        name="creation_date"
+                                        pInputText
+                                        [placeholder]="
+                                            'attachment.list.creation_date' | translate | lowercase
+                                        "
+                                        type="date"
+                                    />
+                                </div>
+                            </div>
+
+                            <div
+                                *ngIf="element.attachment_uuid"
+                                class="form-group p-grid"
+                            >
+                                <div class="p-col-2">
+                                    <label>{{
+                                        'common.attachment' | translate
+                                    }}</label>
+                                </div>
+                                <div class="p-col-10">
+                                    <a
+                                        [href]="
+                                            downloadURL +
+                                            '/' +
+                                            element.attachment_uuid +
+                                            '/download'
+                                        "
+                                    >
+                                        <p-button
+                                            label="download"
+                                            class="p-button-link p-button-sm"
+                                        >
+                                        </p-button>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </p-card>

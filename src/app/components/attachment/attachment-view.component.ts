@@ -19,7 +19,7 @@ export class AttachmentViewComponent extends AbstractViewComponent<Attachment> {
     protected previousRouteService: PreviousRouteService,
     protected route: ActivatedRoute
   ) {
-    super(router, route, attachmentService, 'companies');
+    super(router, route, attachmentService, 'attachments');
 
     this.fromEditPage =
       previousRouteService.getPreviousUrl().includes('edit') ||
