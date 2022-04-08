@@ -70,10 +70,11 @@
                 <p-card>
                     <div class="p-grid">
                         <div class="p-col-12">
+
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{ 'users.name' | translate }} (*)
+                                    {{ 'companies.list.name' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
@@ -83,7 +84,7 @@
                                         name="name"
                                         pInputText
                                         [placeholder]="
-                                            'users.name' | translate | lowercase
+                                            'companies.list.name' | translate | lowercase
                                         "
                                         type="text"
                                     />
@@ -94,23 +95,23 @@
                                 style="align-items: center">
                                 <div class="p-col-3">
                                     {{
-                                        'companies.list.vat-number' | translate
+                                        'companies.list.description' | translate
                                     }}
                                     (*)
                                 </div>
 
                                 <div class="p-col-9">
                                     <input
-                                        [(ngModel)]="element.vatnumber"
-                                        formControlName="vatnumber"
-                                        name="vatnumber"
+                                        [(ngModel)]="element.description"
+                                        formControlName="description"
+                                        name="description"
                                         pInputText
                                         [placeholder]="
-                                            'companies.vat-number'
+                                            'companies.list.description'
                                                 | translate
                                                 | lowercase
                                         "
-                                        placeholder="vatnumber"
+                                        placeholder="description"
                                         type="text"
                                     />
                                 </div>
@@ -119,23 +120,107 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    <!-- {{
-                                        'companies.list.vat-number' | translate
-                                    }} -->
-                                    Webhook Url (*)
+                                    {{
+                                        'companies.list.address' | translate
+                                    }}
+                                    (*)
                                 </div>
 
                                 <div class="p-col-9">
                                     <input
-                                        [(ngModel)]="element.webhook_link"
-                                        formControlName="webhook_link"
-                                        name="webhook_link"
+                                        [(ngModel)]="element.address"
+                                        formControlName="address"
+                                        name="address"
                                         pInputText
-                                        placeholder="webhook url"
+                                        [placeholder]="
+                                            'companies.list.address'
+                                                | translate
+                                                | lowercase
+                                        "
+                                        placeholder="address"
                                         type="text"
                                     />
                                 </div>
                             </div>
+
+                            <div class="form-group p-grid"
+                                style="align-items: center">
+                                <div class="p-col-3">
+                                    {{
+                                        'companies.list.city' | translate
+                                    }}
+                                    (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.city"
+                                        formControlName="city"
+                                        name="city"
+                                        pInputText
+                                        [placeholder]="
+                                            'companies.list.city'
+                                                | translate
+                                                | lowercase
+                                        "
+                                        placeholder="city"
+                                        type="text"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group p-grid"
+                                style="align-items: center">
+                                <div class="p-col-3">
+                                    {{
+                                        'companies.list.province' | translate
+                                    }}
+                                    (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.province"
+                                        formControlName="province"
+                                        name="province"
+                                        pInputText
+                                        [placeholder]="
+                                            'companies.list.province'
+                                                | translate
+                                                | lowercase
+                                        "
+                                        placeholder="province"
+                                        type="text"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group p-grid"
+                                style="align-items: center">
+                                <div class="p-col-3">
+                                    {{
+                                        'companies.list.active' | translate
+                                    }}
+                                    (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.active"
+                                        formControlName="active"
+                                        name="active"
+                                        pInputText
+                                        [placeholder]="
+                                            'companies.list.active'
+                                                | translate
+                                                | lowercase
+                                        "
+                                        placeholder="active"
+                                        type="boolean"
+                                    />
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </p-card>

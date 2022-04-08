@@ -12,8 +12,7 @@ import { CompanyService } from 'src/app/services/company.service';
 })
 export class CompanyEditComponent
     extends AbstractEditComponent<Company>
-    implements OnInit
-{
+    implements OnInit {
     public registerForm: FormGroup;
 
     public genderOptions: SelectItem[] = [];
@@ -49,8 +48,11 @@ export class CompanyEditComponent
     private buildForm(): void {
         this.registerForm = this.formBuilder.group({
             name: [this.element?.name, Validators.required],
-            vatnumber: [this.element?.vatnumber, Validators.required],
-            webhook_link: [this.element?.webhook_link, Validators.required]
+            description: [this.element?.description, Validators.required],
+            address: [this.element?.address, Validators.required],
+            city: [this.element?.city, Validators.required],
+            province: [this.element?.province, Validators.required],
+            active: [this.element?.active, Validators.required]
         });
     }
 
@@ -62,7 +64,7 @@ export class CompanyEditComponent
             accept: () => {
                 super.delete();
             },
-            reject: () => {},
+            reject: () => { },
         });
     }
 }

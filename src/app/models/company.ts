@@ -1,10 +1,10 @@
 export class Company {
   uuids: string;
-  uuid: string;
+  uuid?: string;
   name: string;
-  vatnumber: string;
-  creationtime: Date | string;
-  email: string;
+  description: string;
+  address: string;
+  city: string;
+  province: string;
   active: boolean;
-  webhook_link: string;
 }

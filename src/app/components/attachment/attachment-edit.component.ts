@@ -25,7 +25,7 @@ export class AttachmentEditComponent extends AbstractEditComponent<Attachment>
         private confirmationService: ConfirmationService,
         private formBuilder: FormBuilder
     ) {
-        super(router, route, attachmentService, messageService, 'companies');
+        super(router, route, attachmentService, messageService, 'attachment');
 
         this.element = new Attachment();
 

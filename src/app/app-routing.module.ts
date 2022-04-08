@@ -13,6 +13,9 @@ import { UserViewComponent } from './components/user/user-view.component';
 import { VisitorsListComponent } from './components/visitor/visitor-list.component';
 import { VisitorViewComponent } from './components/visitor/visitor-view.component';
 import { VisitorsEditComponent } from './components/visitor/visitor-edit.component';
+import { AttachmentListComponent } from './components/attachment/attachment-list.component';
+import { AttachmentViewComponent } from './components/attachment/attachment-view.component';
+import { AttachmentEditComponent } from './components/attachment/attachment-edit.component';
 
 const routes: Routes = [
     {
@@ -102,6 +105,33 @@ const routes: Routes = [
             {
                 path: 'new',
                 component: VisitorsEditComponent,
+                canActivate: [AppAuthGuard],
+            },
+        ],
+    },
+
+    {
+        path: 'attachments',
+        canActivate: [AppAuthGuard],
+        children: [
+            {
+                path: 'list',
+                component: AttachmentListComponent,
+                canActivate: [AppAuthGuard],
+            },
+            {
+                path: 'view/:id',
+                component: AttachmentViewComponent,
+                canActivate: [AppAuthGuard],
+            },
+            {
+                path: 'edit/:id',
+                component: AttachmentEditComponent,
+                canActivate: [AppAuthGuard],
+            },
+            {
+                path: 'new',
+                component: AttachmentEditComponent,
                 canActivate: [AppAuthGuard],
             },
         ],

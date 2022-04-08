@@ -4,9 +4,10 @@
     <p-card *ngIf="attachment">
         <div class="p-grid">
             <div class="p-col-12">
+
                 <div class="form-group p-grid">
                     <div class="p-col-12">
-                        <label>{{ 'users.name' | translate }}</label>
+                        <label>{{ 'attachments.list.name' | translate }}</label>
                     </div>
                     <div class="p-col-12">{{ attachment.name }}</div>
                 </div>
@@ -14,18 +15,39 @@
                 <div class="form-group p-grid">
                     <div class="p-col-12">
                         <label>
-                            {{ 'attachments.list.vat-number' | translate }}</label
+                            {{ 'attachments.list.external_type' | translate }}</label
                         >
                     </div>
-                    <div class="p-col-12">{{ attachment.vatnumber }}</div>
+                    <div class="p-col-12">{{ attachment.external_type }}</div>
                 </div>
+
                 <div class="form-group p-grid">
                     <div class="p-col-12">
-                        <label>Webhook Url</label
+                        <label>
+                            {{ 'attachments.list.external_uuid' | translate }}</label
                         >
                     </div>
-                    <div class="p-col-12">{{ attachment.webhook_link }}</div>
+                    <div class="p-col-12">{{ attachment.external_uuid }}</div>
                 </div>
+
+                <div class="form-group p-grid">
+                    <div class="p-col-12">
+                        <label>
+                            {{ 'attachments.list.mime_type' | translate }}</label
+                        >
+                    </div>
+                    <div class="p-col-12">{{ attachment.mime_type }}</div>
+                </div>
+
+                <div class="form-group p-grid">
+                    <div class="p-col-12">
+                        <label>
+                            {{ 'attachments.list.creation_date' | translate }}</label
+                        >
+                    </div>
+                    <div class="p-col-12">{{ attachment.creation_date }}</div>
+                </div>
+
             </div>
         </div>
     </p-card>
@@ -113,10 +135,11 @@
                     </p-header>
                     <div class="p-grid">
                         <div class="p-col-12">
+
                             <div class="form-group p-grid">
                                 <div class="p-col-2">
                                     <label>{{
-                                        'users.name' | translate
+                                        'attachment.list.name' | translate
                                     }}</label>
                                 </div>
                                 <div class="p-col-10">{{ element.name }}</div>
@@ -124,25 +147,67 @@
 
                             <div class="form-group p-grid">
                                 <div class="p-col-2">
-                                    <label>
-                                        {{
-                                            'attachments.list.vat-number'
-                                                | translate
-                                        }}
-                                    </label>
+                                    <label>{{
+                                        'attachment.list.external_type' | translate
+                                    }}</label>
                                 </div>
-                                <div class="p-col-10">
-                                    {{ element.vatnumber }}
-                                </div>
+                                <div class="p-col-10">{{ element.external_type }}</div>
                             </div>
+
                             <div class="form-group p-grid">
                                 <div class="p-col-2">
-                                    <label>Webhook Url</label>
+                                    <label>{{
+                                        'attachment.list.external_uuid' | translate
+                                    }}</label>
+                                </div>
+                                <div class="p-col-10">{{ element.external_uuid }}</div>
+                            </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-2">
+                                    <label>{{
+                                        'attachment.list.mime_type' | translate
+                                    }}</label>
+                                </div>
+                                <div class="p-col-10">{{ element.mime_type }}</div>
+                            </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-2">
+                                    <label>{{
+                                        'attachment.list.creation_date' | translate
+                                    }}</label>
+                                </div>
+                                <div class="p-col-10">{{ element.creation_date }}</div>
+                            </div>
+
+                            <div
+                                *ngIf="element.attachment_uuid"
+                                class="form-group p-grid"
+                            >
+                                <div class="p-col-2">
+                                    <label>{{
+                                        'common.attachment' | translate
+                                    }}</label>
                                 </div>
                                 <div class="p-col-10">
-                                    {{ element.webhook_link }}
+                                    <a
+                                        [href]="
+                                            downloadURL +
+                                            '/' +
+                                            element.attachment_uuid +
+                                            '/download'
+                                        "
+                                    >
+                                        <p-button
+                                            label="download"
+                                            class="p-button-link p-button-sm"
+                                        >
+                                        </p-button>
+                                    </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </p-card>

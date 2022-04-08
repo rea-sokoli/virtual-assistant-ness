@@ -8,18 +8,51 @@
             size="30"
             pInputText
             [(ngModel)]="service.search.like.name"
-            [placeholder]="'users.name' | translate | lowercase"
+            [placeholder]="'companies.list.name' | translate | lowercase"
         />
     </div>
 
     <div class="form-group">
         <input
-            id="vatnumber"
+            id="description"
             type="text"
             size="30"
             pInputText
-            [(ngModel)]="service.search.obj.vatnumber"
-            [placeholder]="'companies.list.vat-number' | translate | lowercase"
+            [(ngModel)]="service.search.obj.description"
+            [placeholder]="'companies.list.description' | translate | lowercase"
+        />
+    </div>
+
+    <div class="form-group">
+        <input
+            id="city"
+            type="text"
+            size="30"
+            pInputText
+            [(ngModel)]="service.search.obj.city"
+            [placeholder]="'companies.list.city' | translate | lowercase"
+        />
+    </div>
+
+    <div class="form-group">
+        <input
+            id="province"
+            type="text"
+            size="30"
+            pInputText
+            [(ngModel)]="service.search.obj.province"
+            [placeholder]="'companies.list.province' | translate | lowercase"
+        />
+    </div>
+
+    <div class="form-group">
+        <input
+            id="active"
+            type="text"
+            size="30"
+            pInputText
+            [(ngModel)]="service.search.obj.active"
+            [placeholder]="'companies.list.active' | translate | lowercase"
         />
     </div>
 
@@ -114,17 +147,25 @@
                                 width="50"
                             ></th>
                             <th pResizableColumn>
-                                {{ 'users.name' | translate }}
+                                {{ 'companies.list.name' | translate }}
                             </th>
                             <th pResizableColumn>
-                                {{ 'companies.list.vat-number' | translate }}
+                                {{ 'companies.list.description' | translate }}
                             </th>
                             <th pResizableColumn>
-                                Webhook Url
+                                {{ 'companies.list.address' | translate }}
                             </th>
-                            <th [style.width.px]="190" style="text-align: center;">
-                                {{ 'common.actions' | translate }}
+                            <th pResizableColumn>
+                                {{ 'companies.list.city' | translate }}
                             </th>
+                            <th pResizableColumn>
+                                {{ 'companies.list.province' | translate }}
+                            </th>
+                            <th pResizableColumn>
+                                {{ 'companies.list.active' | translate }}
+                            </th>
+                            <th style="width: 190px;"></th>
+
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="emptymessage">
@@ -143,11 +184,21 @@
                                 {{ rowData?.name }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData?.vatnumber }}
+                                {{ rowData?.description }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData?.webhook_link }}
+                                {{ rowData?.address }}
                             </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData?.city }}
+                            </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData?.province }}
+                            </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData?.active }}
+                            </td>
+
                             <td style="text-align: center;">
                                 <button
                                     *permit="'Admin'"

@@ -3,21 +3,23 @@
 <p-overlayPanel #op [dismissable]="false" appendTo="body" styleClass="clearfix">
     <div class="form-group">
         <input
-            id="name"
+            id="external_type"
             type="text"
             size="30"
             pInputText
-            [(ngModel)]="service.search.like.name"
-            [placeholder]="'users.name' | translate | lowercase"
+            [(ngModel)]="service.search.like.external_type"
+            [placeholder]="'attachments.list.external_type' | translate | lowercase"
         />
     </div>
 
     <div class="form-group">
         <input
-            id="vatnumber"
+            id="external_uuid"
             type="text"
             size="30"
             pInputText
+            [(ngModel)]="service.search.like.external_uuid"
+            [placeholder]="'attachments.list.external_uuid' | translate | lowercase"
         />
     </div>
 
@@ -112,17 +114,21 @@
                                 width="50"
                             ></th>
                             <th pResizableColumn>
-                                {{ 'users.name' | translate }}
+                                {{ 'attachments.list.name' | translate }}
                             </th>
                             <th pResizableColumn>
-                                {{ 'attachments.list.vat-number' | translate }}
+                                {{ 'attachments.list.external_type' | translate }}
                             </th>
                             <th pResizableColumn>
-                                Webhook Url
+                                {{ 'attachments.list.external_uuid' | translate }}
                             </th>
-                            <th [style.width.px]="190" style="text-align: center;">
-                                {{ 'common.actions' | translate }}
+                            <th pResizableColumn>
+                                {{ 'attachments.list.mime_type' | translate }}
                             </th>
+                            <th pResizableColumn>
+                                {{ 'attachments.list.creation_date' | translate }}
+                            </th>
+                            <th style="width: 190px;"></th>
                         </tr>
                     </ng-template>
                     <ng-template pTemplate="emptymessage">
@@ -141,10 +147,16 @@
                                 {{ rowData?.name }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData?.vatnumber }}
+                                {{ rowData?.external_type }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData?.webhook_link }}
+                                {{ rowData?.external_uuid }}
+                            </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData?.mime_type }}
+                            </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData?.creation_date }}
                             </td>
                             <td style="text-align: center;">
                                 <button
@@ -170,7 +182,6 @@
                                     tooltipPosition="left"
                                     icon="fa fa-info"
                                 ></button>
-                                
                             </td>
                         </tr>
                     </ng-template>

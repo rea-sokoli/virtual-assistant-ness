@@ -19,7 +19,11 @@ export class CompaniesListComponent extends AbstractListComponent<Company> imple
         super(router, companyService, 'companies');
 
         this.labels['name'] = 'name';
-        this.labels['vatnumber'] = 'vatnumber';
+        this.labels['description'] = 'description';
+        this.labels['address'] = 'address';
+        this.labels['city'] = 'city';
+        this.labels['province'] = 'province';
+        this.labels['active'] = 'active';
     }
     ngOnInit(): void {
         console.log('COMPANIES', this.model);
@@ -31,7 +35,7 @@ export class CompaniesListComponent extends AbstractListComponent<Company> imple
     }
 
     preLoaddata(): void {
-        this.service.search.orderBy = 'name ASC';
+        this.service.search.orderBy = 'name';
         super.preLoaddata();
     }
 

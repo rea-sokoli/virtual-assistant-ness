@@ -105,6 +105,7 @@
         "address": "Address",
         "phone_number": "Phone number",
         "company": "Company",
+        "attachment": "Attachment",
         "active": "Active",
         "selected-users": "Selected Users",
 
@@ -126,7 +127,12 @@
     "companies": {
         "list": {
             "companies-list": "Companies List",
-            "vat-number": "VAT number"
+            "name": "Name",
+            "description": "Description",
+            "address": "Address",
+            "city": "City",
+            "province": "Province",
+            "active": "Active"
         },
         "edit": {
             "edit-comp": "Edit company"
@@ -155,7 +161,11 @@
     "attachments": {
         "list": {
             "attachments-list": "Attachments List",
-            "vat-number": "VAT number"
+            "name": "Name",
+            "external_type": "External Type",
+            "external_uuid": "External Code",
+            "mime_type": "Mime Type",
+            "creation_date": "Creation Date"
         },
         "edit": {
             "edit-attachment": "Edit attachment"
