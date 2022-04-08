@@ -4,6 +4,8 @@ export class User {
   fiscalcode: string;
   name: string;
   surname: string;
+  city: string;
+  province: string;
   phone_number: string;
   email: string;
   address: string;
@@ -12,4 +14,5 @@ export class User {
   attachment_uuid: string;
   roles: string[];
   admin: boolean;
+  active: boolean;
 }

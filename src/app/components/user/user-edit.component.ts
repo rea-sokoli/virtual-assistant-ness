@@ -48,9 +48,11 @@ export class UserEditComponent
     private buildForm(): void {
         this.registerForm = this.formBuilder.group({
             fiscalcode: [this.element.fiscalcode, Validators.required],
-            address: [this.element.address, Validators.required],
             name: [this.element.name, Validators.required],
             surname: [this.element.surname, Validators.required],
+            address: [this.element.address, Validators.required],
+            city: [this.element.city, Validators.required],
+            province: [this.element.province, Validators.required],
             phone_number: [
                 this.element.phone_number,
                 [
@@ -61,6 +63,7 @@ export class UserEditComponent
             email: [this.element.email, [Validators.required, Validators.email]],
             company_uuid: [this.element.company_uuid],
             attachment_uuid: [this.element.attachment_uuid],
+            active: [this.element.active, Validators.required],
         });
     }
 

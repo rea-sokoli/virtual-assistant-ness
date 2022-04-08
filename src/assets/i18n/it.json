@@ -97,10 +97,13 @@
     "fiscalcode": "Codice fiscale",
     "name": "Nome",
     "surname": "Cognome",
-    "phone-number": "Telefono",
+    "city": "Città",
+    "province": "Provincia",
+    "phone_number": "Telefono",
     "email": "Email",
     "address": "Indirizzo",
     "company": "Azienda",
+    "active": "Attivo",
     "selected-users": "Utenti selezionati",
 
     "list": {
@@ -136,7 +139,9 @@
   "visitors": {
     "list": {
       "visitors-list": "Lista Visitatori",
-      "vat-number": "Partita IVA"
+      "fiscalcode": "Codice fiscale",
+      "exit_date": "Data di uscita",
+      "entrance_date": "Data di entra"
     },
     "edit": {
       "edit-visitor": "Modifica Visitatore"

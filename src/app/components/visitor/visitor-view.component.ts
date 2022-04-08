@@ -1,10 +1,9 @@
-import { Visitor } from 'src/app/models/visitor';
+import { Visitor } from '../../models/visitor';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AbstractViewComponent } from 'src/app/common/components/abstract-view.component';
 import { VisitorService } from 'src/app/services/visitor.service';
 import { PreviousRouteService } from 'src/app/common/services/previous-route.service';
-
 
 @Component({
   selector: 'app-visitor-view',

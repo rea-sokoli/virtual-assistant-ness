@@ -34,7 +34,14 @@ export class UserListComponent extends AbstractListComponent<User> {
         super(router, userService, 'users');
 
         this.labels['company_uuid'] = 'company';
+        this.labels['name'] = 'name';
+        this.labels['surname'] = 'surname';
+        this.labels['city'] = 'city';
+        this.labels['province'] = 'province';
+        this.labels['fiscalcode'] = 'fiscalcode';
         this.labels['phone_number'] = 'phone_number';
+        this.labels['email'] = 'email';
+        this.labels['active'] = 'active';
     }
 
     getId(): string {

@@ -116,11 +116,31 @@
                             <div class="form-group p-grid">
                                 <div class="p-col-2">
                                     <label>{{
-                                        'users.phone-number' | translate
+                                        'users.address' | translate
+                                    }}</label>
+                                </div>
+                                <div class="p-col-10">{{ element.address }}</div>
+                            </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-2">
+                                    <label>{{
+                                        'users.city' | translate
                                     }}</label>
                                 </div>
                                 <div class="p-col-10">
-                                    {{ element.phone_number }}
+                                    {{ element.city }}
+                                </div>
+                            </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-2">
+                                    <label>{{
+                                        'users.province' | translate
+                                    }}</label>
+                                </div>
+                                <div class="p-col-10">
+                                    {{ element.province }}
                                 </div>
                             </div>
 
@@ -136,10 +156,12 @@
                             <div class="form-group p-grid">
                                 <div class="p-col-2">
                                     <label>{{
-                                        'users.address' | translate
+                                        'users.phone_number' | translate
                                     }}</label>
                                 </div>
-                                <div class="p-col-10">{{ element.address }}</div>
+                                <div class="p-col-10">
+                                    {{ element.phone_number }}
+                                </div>
                             </div>
 
                             <div class="form-group p-grid">
@@ -157,6 +179,17 @@
                                     >
                                         {{ element.company_name }}
                                     </a>
+                                </div>
+                            </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-2">
+                                    <label>{{
+                                        'users.active' | translate
+                                    }}</label>
+                                </div>
+                                <div class="p-col-10">
+                                    {{ element.active }}
                                 </div>
                             </div>
 

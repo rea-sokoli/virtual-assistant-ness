@@ -9,6 +9,7 @@ import { VISITOR_API } from '../constants/constants';
     providedIn: 'root',
 })
 export class VisitorService extends AbstractService<Visitor> {
+    getVisitor: any;
     constructor(protected httpClient: HttpClient) {
         super(VISITOR_API, httpClient);
     }
