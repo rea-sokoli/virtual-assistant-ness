@@ -10,7 +10,7 @@ import { VisitorService } from 'src/app/services/visitor.service';
     selector: 'app-visitor-edit',
     templateUrl: './visitor-edit.component.html',
 })
-export class VisitorEditComponent
+export class VisitorsEditComponent
     extends AbstractEditComponent<Visitor>
     implements OnInit {
     public registerForm: FormGroup;
@@ -47,9 +47,9 @@ export class VisitorEditComponent
 
     private buildForm(): void {
         this.registerForm = this.formBuilder.group({
-            name: [this.element?.name, Validators.required],
-            vatnumber: [this.element?.vatnumber, Validators.required],
-            webhook_link: [this.element?.webhook_link, Validators.required]
+            fiscalcode: [this.element?.fiscalcode, Validators.required],
+            entrance_date: [this.element?.entrance_date, Validators.required],
+            exit_date: [this.element?.exit_date, Validators.required],
         });
     }
 

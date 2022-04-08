@@ -2,11 +2,6 @@
 
 <p-overlayPanel #op [dismissable]="false" appendTo="body" styleClass="clearfix">
     <div class="form-group">
-        <input id="fiscalcode" type="text" size="30" pInputText [(ngModel)]="service.search.obj.fiscalcode"
-            [placeholder]="'users.fiscalcode' | translate | lowercase" />
-    </div>
-
-    <div class="form-group">
         <input id="name" type="text" size="30" pInputText [(ngModel)]="service.search.like.name"
             [placeholder]="'users.name' | translate | lowercase" />
     </div>
@@ -17,13 +12,18 @@
     </div>
 
     <div class="form-group">
-        <input id="phone_number" type="text" size="30" pInputText [(ngModel)]="service.search.like.phone_number"
-            placeholder="phone number..." [placeholder]="'users.phone-number' | translate | lowercase" />
+        <input id="address" type="text" size="40" pInputText [(ngModel)]="service.search.like.address"
+            [placeholder]="'users.address' | translate | lowercase" />
     </div>
 
     <div class="form-group">
-        <input id="address" type="text" size="40" pInputText [(ngModel)]="service.search.like.address"
-            [placeholder]="'users.address' | translate | lowercase" />
+        <input id="city" type="text" size="30" pInputText [(ngModel)]="service.search.like.city"
+            [placeholder]="'users.city' | translate | lowercase" />
+    </div>
+
+    <div class="form-group">
+        <input id="province" type="text" size="30" pInputText [(ngModel)]="service.search.like.province"
+            [placeholder]="'users.province' | translate | lowercase" />
     </div>
 
     <div class="form-group">
@@ -32,11 +32,8 @@
     </div>
 
     <div class="form-group">
-        <p-autoComplete [(ngModel)]="selectedCompany" [suggestions]="filteredCompany"
-            (completeMethod)="filterCompany($event)" name="company_uuid" field="name" [size]="30"
-            [placeholder]="'users.company' | translate | lowercase" [minLength]="1" (onSelect)="fillCompany()"
-            [dropdown]="true">
-        </p-autoComplete>
+        <input id="active" type="text" size="30" pInputText [(ngModel)]="service.search.like.active"
+            [placeholder]="'users.active' | translate | lowercase" />
     </div>
 
     <div class="p-d-flex p-jc-center">
@@ -93,16 +90,25 @@
                                 {{ 'users.surname' | translate }}
                             </th>
                             <th pResizableColumn>
-                                {{ 'users.phone-number' | translate }}
+                                {{ 'users.address' | translate }}
+                            </th>
+                            <th pResizableColumn>
+                                {{ 'users.city' | translate }}
+                            </th>
+                            <th pResizableColumn>
+                                {{ 'users.province' | translate }}
                             </th>
                             <th pResizableColumn>
                                 {{ 'users.email' | translate }}
                             </th>
                             <th pResizableColumn>
-                                {{ 'users.address' | translate }}
+                                {{ 'users.phone_number' | translate }}
                             </th>
                             <th pResizableColumn>
                                 {{ 'users.company' | translate }}
+                            </th>
+                            <th pResizableColumn>
+                                {{ 'users.active' | translate }}
                             </th>
 
                             <th [style.width.px]="190"></th>
@@ -126,16 +132,25 @@
                                 {{ rowData.surname }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData.phone_number }}
+                                {{ rowData.address }}
+                            </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData.city }}
+                            </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData.province }}
                             </td>
                             <td class="ui-resizable-column">
                                 {{ rowData.email }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData.address }}
+                                {{ rowData.phone_number }}
                             </td>
                             <td class="ui-resizable-column">
                                 {{ rowData.company_name }}
+                            </td>
+                            <td class="ui-resizable-column">
+                                {{ rowData.active }}
                             </td>
 
                             <td>

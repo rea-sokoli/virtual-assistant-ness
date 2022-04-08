@@ -3,23 +3,34 @@
 <p-overlayPanel #op [dismissable]="false" appendTo="body" styleClass="clearfix">
     <div class="form-group">
         <input
-            id="name"
+            id="fiscalcode"
             type="text"
             size="30"
             pInputText
-            [(ngModel)]="service.search.like.name"
-            [placeholder]="'users.name' | translate | lowercase"
+            [(ngModel)]="service.search.like.fiscalcode"
+            [placeholder]="'visitors.list.fiscalcode' | translate | lowercase"
         />
     </div>
 
     <div class="form-group">
         <input
-            id="vatnumber"
-            type="text"
+            id="entrance_date"
+            type="date"
             size="30"
             pInputText
-            [(ngModel)]="service.search.obj.vatnumber"
-            [placeholder]="'visitors.list.vat-number' | translate | lowercase"
+            [(ngModel)]="service.search.obj.entrance_date"
+            [placeholder]="'visitors.list.entrance_date' | translate | lowercase"
+        />
+    </div>
+
+    <div class="form-group">
+        <input
+            id="exit_date"
+            type="date"
+            size="30"
+            pInputText
+            [(ngModel)]="service.search.obj.exit_date"
+            [placeholder]="'visitors.list.exit_date' | translate | lowercase"
         />
     </div>
 
@@ -114,16 +125,13 @@
                                 width="50"
                             ></th>
                             <th pResizableColumn>
-                                {{ 'users.name' | translate }}
+                                {{ 'visitors.list.fiscalcode' | translate }}
                             </th>
                             <th pResizableColumn>
-                                {{ 'visitors.list.vat-number' | translate }}
+                                {{ 'visitors.list.entrance_date' | translate }}
                             </th>
                             <th pResizableColumn>
-                                Webhook Url
-                            </th>
-                            <th [style.width.px]="190" style="text-align: center;">
-                                {{ 'common.actions' | translate }}
+                                {{ 'visitors.list.exit_date' | translate }}
                             </th>
                         </tr>
                     </ng-template>
@@ -140,13 +148,13 @@
                         <tr>
                             <td>{{ rowIndex + 1 }}</td>
                             <td class="ui-resizable-column">
-                                {{ rowData?.name }}
+                                {{ rowData?.fiscalcode }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData?.vatnumber }}
+                                {{ rowData?.entrance_date }}
                             </td>
                             <td class="ui-resizable-column">
-                                {{ rowData?.webhook_link }}
+                                {{ rowData?.exit_date }}
                             </td>
                             <td style="text-align: center;">
                                 <button

@@ -132,17 +132,59 @@
 
                             <div class="form-group p-grid">
                                 <div class="p-col-3">
-                                    {{ 'users.phone_number' | translate }} (*)
+                                    {{ 'users.address' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
                                     <input
-                                        [(ngModel)]="element.phone_number"
-                                        formControlName="phone_number"
-                                        name="phone_number"
+                                        [(ngModel)]="element.address"
+                                        formControlName="address"
+                                        name="address"
                                         pInputText
                                         [placeholder]="
-                                            'users.phone-number'
+                                            'users.address'
+                                                | translate
+                                                | lowercase
+                                        "
+                                        type="address"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-3">
+                                    {{ 'users.city' | translate }} (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.city"
+                                        formControlName="city"
+                                        name="city"
+                                        pInputText
+                                        [placeholder]="
+                                            'users.city'
+                                                | translate
+                                                | lowercase
+                                        "
+                                        type="text"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-3">
+                                    {{ 'users.province' | translate }} (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.province"
+                                        formControlName="province"
+                                        name="province"
+                                        pInputText
+                                        [placeholder]="
+                                            'users.province'
                                                 | translate
                                                 | lowercase
                                         "
@@ -174,21 +216,21 @@
 
                             <div class="form-group p-grid">
                                 <div class="p-col-3">
-                                    {{ 'users.address' | translate }} (*)
+                                    {{ 'users.phone_number' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
                                     <input
-                                        [(ngModel)]="element.address"
-                                        formControlName="address"
-                                        name="address"
+                                        [(ngModel)]="element.phone_number"
+                                        formControlName="phone_number"
+                                        name="phone_number"
                                         pInputText
                                         [placeholder]="
-                                            'users.address'
+                                            'users.phone_number'
                                                 | translate
                                                 | lowercase
                                         "
-                                        type="address"
+                                        type="text"
                                     />
                                 </div>
                             </div>
@@ -219,6 +261,28 @@
                                     </p-autoComplete>
                                 </div>
                             </div>
+
+                            <div class="form-group p-grid">
+                                <div class="p-col-3">
+                                    {{ 'users.active' | translate }} (*)
+                                </div>
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.active"
+                                        formControlName="active"
+                                        name="active"
+                                        pInputText
+                                        [placeholder]="
+                                            'users.active'
+                                                | translate
+                                                | lowercase
+                                      "
+                                        type="boolean"
+                                    />
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </p-card>

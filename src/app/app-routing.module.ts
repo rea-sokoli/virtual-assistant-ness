@@ -10,9 +10,9 @@ import { UserEditComponent } from './components/user/user-edit.component';
 import { UserListComponent } from './components/user/user-list.component';
 import { UserVerificationComponent } from './components/user/user-verification.component';
 import { UserViewComponent } from './components/user/user-view.component';
-import { VisitorListComponent } from './components/visitor/visitor-list.component';
+import { VisitorsListComponent } from './components/visitor/visitor-list.component';
 import { VisitorViewComponent } from './components/visitor/visitor-view.component';
-import { VisitorEditComponent } from './components/visitor/visitor-edit.component';
+import { VisitorsEditComponent } from './components/visitor/visitor-edit.component';
 
 const routes: Routes = [
     {
@@ -86,7 +86,7 @@ const routes: Routes = [
         children: [
             {
                 path: 'list',
-                component: VisitorListComponent,
+                component: VisitorsListComponent,
                 canActivate: [AppAuthGuard],
             },
             {
@@ -96,12 +96,12 @@ const routes: Routes = [
             },
             {
                 path: 'edit/:id',
-                component: VisitorEditComponent,
+                component: VisitorsEditComponent,
                 canActivate: [AppAuthGuard],
             },
             {
                 path: 'new',
-                component: VisitorEditComponent,
+                component: VisitorsEditComponent,
                 canActivate: [AppAuthGuard],
             },
         ],

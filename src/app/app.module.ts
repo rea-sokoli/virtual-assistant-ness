@@ -44,7 +44,7 @@ import { UserViewComponent } from './components/user/user-view.component';
 import { VisitorViewComponent } from './components/visitor/visitor-view.component';
 import { UserVerificationComponent } from './components/user/user-verification.component';
 import { CompaniesListComponent } from './components/companies/companies-list.component';
-import { VisitorListComponent } from './components/visitor/visitor-list.component';
+import { VisitorsListComponent } from './components/visitor/visitor-list.component';
 import { OutputDateTimePipe } from './pipes/output-date-time.pipe';
 import { OutputDatePipe } from './pipes/output-date.pipe';
 import { CompanyEditComponent } from './components/companies/company-edit.component';
@@ -52,7 +52,7 @@ import { CompanyViewComponent } from './components/companies/company-view.compon
 import { AttachmentEditComponent } from './components/attachment/attachment-edit.component';
 import { AttachmentViewComponent } from './components/attachment/attachment-view.component';
 import { AttachmentListComponent } from './components/attachment/attachment-list.component';
-import { VisitorEditComponent } from './components/visitor/visitor-edit.component';
+import { VisitorsEditComponent } from './components/visitor/visitor-edit.component';
 import { UserEditComponent } from './components/user/user-edit.component';
 import { UserListComponent } from './components/user/user-list.component';
 import { ButtonModule } from 'primeng/button';
@@ -100,8 +100,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
         UserListComponent,
         UserViewComponent,
         UserVerificationComponent,
-        VisitorListComponent,
-        VisitorEditComponent,
+        VisitorsListComponent,
+        VisitorsEditComponent,
         VisitorViewComponent,
         AttachmentListComponent,
         AttachmentEditComponent,

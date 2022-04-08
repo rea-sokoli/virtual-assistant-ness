@@ -6,10 +6,10 @@ import { VisitorService } from 'src/app/services/visitor.service';
 import { Table } from 'primeng/table';
 
 @Component({
-    selector: 'app-visitor-list',
+    selector: 'app-visitors-list',
     templateUrl: './visitor-list.component.html',
 })
-export class VisitorListComponent extends AbstractListComponent<Visitor> implements OnInit {
+export class VisitorsListComponent extends AbstractListComponent<Visitor> implements OnInit {
     pageSize = 10;
 
     labels: any = {};
@@ -18,8 +18,9 @@ export class VisitorListComponent extends AbstractListComponent<Visitor> impleme
     constructor(router: Router, private visitorService: VisitorService) {
         super(router, visitorService, 'visitors');
 
-        this.labels['name'] = 'name';
-        this.labels['vatnumber'] = 'vatnumber';
+        this.labels['fiscalcode'] = 'fiscalcode';
+        this.labels['entrance_date'] = 'entrance_date';
+        this.labels['exit_date'] = 'exit_date';
     }
     ngOnInit(): void {
         console.log('VISITORS', this.model);

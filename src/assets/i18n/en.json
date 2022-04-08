@@ -28,6 +28,7 @@
     "CUSTOMERS": "CUSTOMERS",
     "CONFIGURATIONS": "CONFIGURATIONS",
     "USERS": "USERS",
+
     "homepage": {
         "welcome": "Welcome",
         "version": "Version",
@@ -98,10 +99,13 @@
         "fiscalcode": "Fiscal Code",
         "name": "Name",
         "surname": "Surname",
-        "phone-number": "Phone number",
+        "city": "City",
+        "province": "Province",
         "email": "Email",
         "address": "Address",
+        "phone_number": "Phone number",
         "company": "Company",
+        "active": "Active",
         "selected-users": "Selected Users",
 
         "list": {
@@ -135,7 +139,10 @@
     "visitors": {
         "list": {
             "visitors-list": "Visitors List",
-            "vat-number": "VAT number"
+            "fiscalcode": "Fiscal Code",
+            "exit_date": "Exit Date",
+            "entrance_date": "Entrance Date"
+
         },
         "edit": {
             "edit-visitor": "Edit visitor"

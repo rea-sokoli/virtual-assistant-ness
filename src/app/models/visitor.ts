@@ -1,10 +1,7 @@
 export class Visitor {
-  uuids: string;
+  uuids?: string;
   uuid: string;
-  name: string;
-  vatnumber: string;
-  creationtime: Date | string;
-  email: string;
-  active: boolean;
-  webhook_link: string;
+  fiscalcode: string;
+  entrance_date: any;
+  exit_date: any;
 }
