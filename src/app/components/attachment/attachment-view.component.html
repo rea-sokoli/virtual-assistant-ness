@@ -182,31 +182,33 @@
                             </div>
 
                             <div
-                                *ngIf="element.attachment_uuid"
-                                class="form-group p-grid"
-                            >
-                                <div class="p-col-2">
-                                    <label>{{
-                                        'common.attachment' | translate
-                                    }}</label>
-                                </div>
-                                <div class="p-col-10">
-                                    <a
-                                        [href]="
-                                            downloadURL +
-                                            '/' +
-                                            element.attachment_uuid +
-                                            '/download'
-                                        "
-                                    >
-                                        <p-button
-                                            label="download"
-                                            class="p-button-link p-button-sm"
-                                        >
-                                        </p-button>
-                                    </a>
-                                </div>
+                            *ngIf="element.attachment_uuid"
+                            class="form-group p-grid"
+                        >
+                            <div class="p-col-2">
+                                <label>{{
+                                    'common.attachment' | translate
+                                }}</label>
                             </div>
+                            <div class="p-col-10">
+                                <a
+                                    [href]="
+                                        downloadURL +
+                                        '/' +
+                                        element.attachment_uuid +
+                                        '/download'
+                                    "
+                                >
+                                    <p-button
+                                        label="download"
+                                        class="p-button-link p-button-sm"
+                                    >
+                                    </p-button>
+                                </a>
+                            </div>
+                        </div>
+
+                            
 
                         </div>
                     </div>

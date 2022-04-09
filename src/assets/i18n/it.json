@@ -163,7 +163,8 @@
       "external_type": "Tipo Esterno",
       "external_uuid": "Codice Esterno",
       "mime_type": "Tipo Mimo",
-      "creation_date": "Data di Creazione"
+      "creation_date": "Data di Creazione",
+      "attachment_uuid": "File allegato"
     },
     "edit": {
       "edit-attachment": "Modifica Allegati"
