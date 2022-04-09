@@ -74,7 +74,7 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{ 'attachment.list.name' | translate }} (*)
+                                    {{ 'attachments.list.name' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
@@ -84,7 +84,7 @@
                                         name="name"
                                         pInputText
                                         [placeholder]="
-                                            'attachment.list.name' | translate | lowercase
+                                            'attachments.list.name' | translate | lowercase
                                         "
                                         type="text"
                                     />
@@ -94,7 +94,7 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{ 'attachment.list.external_type' | translate }} (*)
+                                    {{ 'attachments.list.external_type' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
@@ -104,7 +104,7 @@
                                         name="external_type"
                                         pInputText
                                         [placeholder]="
-                                            'attachment.list.external_type' | translate | lowercase
+                                            'attachments.list.external_type' | translate | lowercase
                                         "
                                         type="text"
                                     />
@@ -114,7 +114,7 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{ 'attachment.list.external_uuid' | translate }} (*)
+                                    {{ 'attachments.list.external_uuid' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
@@ -124,7 +124,7 @@
                                         name="external_uuid"
                                         pInputText
                                         [placeholder]="
-                                            'attachment.list.external_uuid' | translate | lowercase
+                                            'attachments.list.external_uuid' | translate | lowercase
                                         "
                                         type="text"
                                     />
@@ -134,7 +134,7 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{ 'attachment.list.mime_type' | translate }} (*)
+                                    {{ 'attachments.list.mime_type' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
@@ -144,7 +144,7 @@
                                         name="mime_type"
                                         pInputText
                                         [placeholder]="
-                                            'attachment.list.mime_type' | translate | lowercase
+                                            'attachments.list.mime_type' | translate | lowercase
                                         "
                                         type="text"
                                     />
@@ -154,7 +154,7 @@
                             <div class="form-group p-grid"
                                 style="align-items: center">
                                 <div class="p-col-3">
-                                    {{ 'attachment.list.creation_date' | translate }} (*)
+                                    {{ 'attachments.list.creation_date' | translate }} (*)
                                 </div>
 
                                 <div class="p-col-9">
@@ -164,38 +164,32 @@
                                         name="creation_date"
                                         pInputText
                                         [placeholder]="
-                                            'attachment.list.creation_date' | translate | lowercase
+                                            'attachments.list.creation_date' | translate | lowercase
                                         "
                                         type="date"
                                     />
                                 </div>
                             </div>
 
-                            <div
-                                *ngIf="element.attachment_uuid"
-                                class="form-group p-grid"
-                            >
-                                <div class="p-col-2">
-                                    <label>{{
-                                        'common.attachment' | translate
-                                    }}</label>
+                            <div class="form-group p-grid"
+                                style="align-items: center">
+                                <div class="p-col-3">
+                                    {{ 'attachments.list.attachment_uuid' | translate }} (*)
                                 </div>
-                                <div class="p-col-10">
-                                    <a
-                                        [href]="
-                                            downloadURL +
-                                            '/' +
-                                            element.attachment_uuid +
-                                            '/download'
+
+                                <div class="p-col-9">
+                                    <input
+                                        [(ngModel)]="element.attachment_uuid"
+                                        formControlName="attachment_uuid"
+                                        name="attachment_uuid"
+                                        pInputText
+                                        [placeholder]="
+                                            'attachments.list.attachment_uuid' | translate | lowercase
                                         "
-                                    >
-                                        <p-button
-                                            label="download"
-                                            class="p-button-link p-button-sm"
-                                        >
-                                        </p-button>
-                                    </a>
+                                        type="file"
+                                    />
                                 </div>
+                                    
                             </div>
 
                         </div>

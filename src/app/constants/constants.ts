@@ -31,4 +31,5 @@ export enum SigningActions {
     START = 'start',
     STARTSIGN = 'startsign',
     CANCEL = 'cancel',
+    EDIT = "edit",
 }

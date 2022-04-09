@@ -165,7 +165,8 @@
             "external_type": "External Type",
             "external_uuid": "External Code",
             "mime_type": "Mime Type",
-            "creation_date": "Creation Date"
+            "creation_date": "Creation Date",
+            "attachment_uuid": "Attachment File"
         },
         "edit": {
             "edit-attachment": "Edit attachment"
